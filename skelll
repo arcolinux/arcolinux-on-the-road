@@ -27,30 +27,20 @@
 ##################################################################################################################
 
 echo "##################################################################################"
-echo "Skel is now a bash script and no longer an alias"
+echo "Skelll is DIRTY way to install everything you need"
 echo
-echo "It makes it easy to get the new configurations in"
-echo "New configurations often end up in the folder /etc/skel - where it will NOT be used"
+echo "It makes it easy to get the configurations in"
+echo "and you do not care if you CAN NOT REMOVE them later"
 echo
-echo "If we want to use the new config we need to copy the configs from /etc/skel to our"
-echo "home directory ~"
+echo "It is DIRTY copy/paste of a lot of configuration files to"
+echo "start testing and developing faster"
 echo
-echo "You can do this by manually copy/pasting the content from /etc/skel to your ~"
-echo "or we can use 'skel' in a terminal"
-echo
-echo "Skel will make a backup of your '.config' folder to a folder with"
-echo "the name '.config' and a date and time"
-echo
-echo "It will overwrite your settings and that is its purpose"
-echo
-echo "When you have a crashing tiling window manager because you were learning"
-echo "to configure it, you can gain control again by typing 'skel' in a terminal or TTY"
-echo
-echo "More info on this url:"
-echo "https://arcolinux.com/updating-your-system-with-skel-and-still-keeping-your-own-settings/"
+echo "BEWARE BEWARE BEWARE BEWARE BEWARE BEWARE"
+echo "Read this script and test on a virtual machine first"
 echo "##################################################################################"
 
-echo "Can we copy/paste the content from /etc/skel to your home directory? (y/n)"
+echo "Can we copy/paste ALL THE CONTENT over - WE WILL OVERWRITE ALL YOUR FILES? (y/n)"
+echo "Only the .config folder will get a backup"
 read response
 
 if [[ "$response" == [yY] ]]; then
@@ -71,15 +61,34 @@ if [[ "$response" == [yY] ]]; then
 
 	echo
 	echo "##################################################################################"
-	echo "Now we overwrite your .config folder with the files from /etc/skel"
-	echo "The bigger the /etc/skel folder the longer it takes"
+	echo "Now we overwrite ALL YOUR FILES"
+	echo "The larger the content the longer it takes"
 	echo "Be patient"
 	echo "##################################################################################"
 	echo
 
-	sudo cp -rv /arco/etc/ /
-	sudo cp -rv /arco/usr/ /
-	sudo cp -rv /arco/etc/skel/.* $HOME
+	sudo cp -rv /arco/etc/modprobe.d /etc/
+	echo
+	echo "##################################################################################"
+	echo
+	sudo cp -rv /arco/etc/pacman.d/ /etc/
+	echo
+	echo "##################################################################################"
+	echo	
+	sudo cp -rv /arco/etc/samba/ /etc/
+	echo
+	echo "##################################################################################"
+	echo	
+	sudo cp -rv /arco/etc/X11/ /etc/
+	echo
+	echo "##################################################################################"
+	echo	
+	sudo cp -rv /arco/etc/skel/.* $HOME	
+	echo
+	echo "##################################################################################"
+	echo	
+	sudo cp -rv /arco/usr/* /usr
+
 
 	echo
   	echo "##################################################################################"
