@@ -97,6 +97,7 @@ mkdir -p root/etc/skel/.icons
 cp Papirus-Dark.tar.gz root/etc/skel/.icons
 
 tar -xvf root/etc/skel/.icons/Papirus-Dark.tar.gz -C root/etc/skel/.icons
+rm root/etc/skel/.icons/Papirus-Dark.tar.gz
 
 FIND="button-title=ArcoLinux"
 REPLACE="button-title=Arch Linux"
