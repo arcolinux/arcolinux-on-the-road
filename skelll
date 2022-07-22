@@ -25,7 +25,7 @@
 #tput setaf 7 = gray 
 #tput setaf 8 = light blue
 ##################################################################################################################
-
+tput setaf 1
 echo "##################################################################################"
 echo "Skelll is DIRTY way to install everything you need"
 echo
@@ -39,8 +39,12 @@ echo "BEWARE BEWARE BEWARE BEWARE BEWARE BEWARE"
 echo "Read this script and test on a virtual machine first"
 echo "##################################################################################"
 tput sgr0
-echo "Can we copy/paste ALL THE CONTENT over - WE WILL OVERWRITE ALL YOUR FILES? (y/n)"
+echo
+echo "Can we copy/paste ALL THE CONTENT over - WE WILL OVERWRITE ALL YOUR FILES?"
 echo "Only the .config folder will get a backup"
+echo
+echo "Y/N ???"
+echo "##################################################################################"
 read response
 
 if [[ "$response" == [yY] ]]; then
@@ -50,7 +54,6 @@ if [[ "$response" == [yY] ]]; then
 		mkdir ~/.config
 	fi
 	echo
-	tput setaf 1
 	echo "##################################################################################"
 	echo "Making a backup of your .config folder to ~/.config-backup-"$time
 	echo "The bigger the .config folder the longer the backup takes"
@@ -106,7 +109,7 @@ if [[ "$response" == [yY] ]]; then
 	sudo pacman -S variety --noconfirm --needed
 	echo
 	echo
-	tput setaf 2
+	tput setaf 1
   	echo "##################################################################################"
 	echo "###################                   DONE                    ####################"
 	echo "##################################################################################"
