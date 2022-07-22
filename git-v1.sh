@@ -94,7 +94,7 @@ rm root/usr/local/bin/arcolinux-os-release
 
 echo "changes"
 mkdir -p root/etc/skel/.icons
-mv Papirus-Dark.tar.gz root/etc/skel/.icons
+cp Papirus-Dark.tar.gz root/etc/skel/.icons
 
 tar -xvf root/etc/skel/.icons/Papirus-Dark.tar.gz -C root/etc/skel/.icons
 
@@ -107,6 +107,9 @@ FIND="button-icon=start-here-arcolinux"
 REPLACE="button-icon=archlinux-logo"
 sed -i "s/$FIND/$REPLACE/g" root/etc/skel/.config/xfce4/panel/whiskermenu-7.rc
 
+FIND="atom"
+REPLACE="subl"
+sed -i "s/$FIND/$REPLACE/g" root/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 
 # Below command will backup everything inside the project folder
 git add --all .
