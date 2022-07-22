@@ -81,8 +81,8 @@ for name in "${directories[@]}"; do
 	tput sgr0;
 done
 
+echo "moving and removing"
 mv root/etc/skel/.bashrc-latest root/etc/skel/.bashrc
-
 rm root/etc/X11/xorg.conf.d/30-touchpad.conf
 rm root/etc/pacman.d/hooks/arcolinux-system-config-logo.hook
 rm root/etc/pacman.d/hooks/filesystem-logo.hook
@@ -92,6 +92,11 @@ rm root/usr/lib/os-release-arcolinux
 rm root/usr/local/bin/arcolinux-lsb-release
 rm root/usr/local/bin/arcolinux-os-release
 
+echo "changes"
+mkdir -p root/etc/skel/.icons
+mv Papirus-Dark.tar.gz root/etc/skel/.icons
+
+tar -xvf root/etc/skel/.icons/Papirus-Dark.tar.gz -C root/etc/skel/.icons
 
 FIND="button-title=ArcoLinux"
 REPLACE="button-title=Arch Linux"

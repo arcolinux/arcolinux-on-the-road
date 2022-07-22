@@ -27,7 +27,7 @@
 ##################################################################################################################
 tput setaf 1
 echo "##################################################################################"
-echo "Skelll is DIRTY way to install everything you need"
+echo "Skelll is a DIRTY way to install everything you need"
 echo
 echo "It makes it easy to get the configurations in"
 echo "and you do not care if you CAN NOT REMOVE them later"
@@ -37,6 +37,7 @@ echo "start testing and developing faster"
 echo
 echo "BEWARE BEWARE BEWARE BEWARE BEWARE BEWARE"
 echo "Read this script and test on a virtual machine first"
+echo "We will install the software we need"
 echo "##################################################################################"
 tput sgr0
 echo
@@ -107,6 +108,7 @@ if [[ "$response" == [yY] ]]; then
 	sudo pacman -S dmenu --noconfirm --needed
 	sudo pacman -S ripgrep --noconfirm --needed
 	sudo pacman -S variety --noconfirm --needed
+	sudo pacman -S file-roller --noconfirm --needed
 	echo
 	echo
 	tput setaf 1
