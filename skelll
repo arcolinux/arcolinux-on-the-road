@@ -83,15 +83,15 @@ if [[ "$response" == [yY] ]]; then
 	echo
 	echo "##################################################################################"
 	echo	
-	sudo cp -rv /arco/etc/skel/.* $HOME	
+	cp -rv /arco/etc/skel/.* $HOME	
 	echo
 	echo "##################################################################################"
 	echo	
 	sudo cp -rv /arco/usr/* /usr
 	echo
 	echo "Installing software"
-	sudo pacman -S meld -noconfirm --needed
-	sudo pacman -S arc-gtk-theme -noconfirm --needed
+	sudo pacman -S meld --noconfirm --needed
+	sudo pacman -S arc-gtk-theme --noconfirm --needed
 	sudo pacman -S papirus-icon-theme --confirm --needed
 	sudo pacman -S sardi-icons --confirm --needed
 	sudo pacman -S vimix-cursors --confirm --needed
@@ -100,6 +100,10 @@ if [[ "$response" == [yY] ]]; then
 	sudo pacman -S rxvt-unicode --confirm --needed
 	sudo pacman -S sublime-text-4 --confirm --needed
 	sudo pacman -S ttf-droid --confirm --needed
+	sudo pacman -S dmenu --confirm --needed
+	sudo pacman -S ripgrep --confirm --needed
+	sudo pacman -S variety --confirm --needed
+	echo
 	echo
   	echo "##################################################################################"
 	echo "###################                   DONE                    ####################"

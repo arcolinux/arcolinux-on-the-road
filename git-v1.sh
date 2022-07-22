@@ -99,7 +99,7 @@ sed -i "s/$FIND/$REPLACE/g" root/etc/skel/.config/xfce4/panel/whiskermenu-7.rc
 
 
 FIND="button-icon=start-here-arcolinux"
-REPLACE="button-icon=start-here-arch"
+REPLACE="button-icon=archlinux-logo"
 sed -i "s/$FIND/$REPLACE/g" root/etc/skel/.config/xfce4/panel/whiskermenu-7.rc
 
 

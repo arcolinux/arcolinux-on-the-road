@@ -1,7 +1,7 @@
 favorites=arcolinux-welcome-app.desktop,archlinux-tweak-tool.desktop,firefox.desktop,thunar.desktop,xfce4-terminal.desktop,conkyzen.desktop
 recent=
 button-title=Arch Linux\ \ 
-button-icon=start-here-arch
+button-icon=archlinux-logo
 button-single-row=false
 show-button-title=true
 show-button-icon=true
