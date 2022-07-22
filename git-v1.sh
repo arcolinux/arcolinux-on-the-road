@@ -81,6 +81,8 @@ for name in "${directories[@]}"; do
 	tput sgr0;
 done
 
+mv root/etc/skel/.bashrc-latest root/etc/skel/.bashrc
+
 rm root/etc/X11/xorg.conf.d/30-touchpad.conf
 rm root/etc/pacman.d/hooks/arcolinux-system-config-logo.hook
 rm root/etc/pacman.d/hooks/filesystem-logo.hook
