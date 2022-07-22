@@ -88,8 +88,18 @@ if [[ "$response" == [yY] ]]; then
 	echo "##################################################################################"
 	echo	
 	sudo cp -rv /arco/usr/* /usr
-
-
+	echo
+	echo "Installing software"
+	sudo pacman -S meld -noconfirm --needed
+	sudo pacman -S arc-gtk-theme -noconfirm --needed
+	sudo pacman -S papirus-icon-theme --confirm --needed
+	sudo pacman -S sardi-icons --confirm --needed
+	sudo pacman -S vimix-cursors --confirm --needed
+	sudo pacman -S archlinux-logout-git --confirm --needed
+	sudo pacman -S arcolinux-wallpapers-git --confirm --needed
+	sudo pacman -S rxvt-unicode --confirm --needed
+	sudo pacman -S sublime-text-4 --confirm --needed
+	sudo pacman -S ttf-droid --confirm --needed
 	echo
   	echo "##################################################################################"
 	echo "###################                   DONE                    ####################"
