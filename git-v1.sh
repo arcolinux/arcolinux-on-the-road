@@ -91,7 +91,7 @@ rm root/usr/local/bin/arcolinux-lsb-release
 rm root/usr/local/bin/arcolinux-os-release
 
 FIND="button-title=ArcoLinux"
-REPLACE="button-title=Arch Linux  "
+REPLACE="button-title=Arch Linux"
 
 sed -i "s/$FIND/$REPLACE/g" root/etc/skel/.config/xfce4/panel/whiskermenu-7.rc
 
