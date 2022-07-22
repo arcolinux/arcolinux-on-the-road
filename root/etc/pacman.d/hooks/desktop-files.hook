@@ -1,0 +1,19 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = btrfs-assistant
+Target = timeshift
+Target = proton-community-updater
+Target = yin-yang-git
+Target = xdman
+Target = florencd
+Target = ms-office-online
+Target = realvnc-vnc-*
+Target = waydroid
+Target = wacom-utility
+
+[Action]
+Description = Pacman hook for desktop files
+When = PostTransaction
+Exec = /usr/local/bin/arcolinux-fix-desktop-files
