@@ -81,7 +81,7 @@ for name in "${directories[@]}"; do
 	tput sgr0;
 done
 
-rm root//etc/X11/xorg.conf.d/30-touchpad.conf
+rm root/etc/X11/xorg.conf.d/30-touchpad.conf
 rm root/etc/pacman.d/hooks/arcolinux-system-config-logo.hook
 rm root/etc/pacman.d/hooks/filesystem-logo.hook
 rm root/etc/pacman.d/hooks/lsb-release.hook
@@ -90,9 +90,14 @@ rm root/usr/lib/os-release-arcolinux
 rm root/usr/local/bin/arcolinux-lsb-release
 rm root/usr/local/bin/arcolinux-os-release
 
+
 FIND="button-title=ArcoLinux"
 REPLACE="button-title=Arch Linux"
+sed -i "s/$FIND/$REPLACE/g" root/etc/skel/.config/xfce4/panel/whiskermenu-7.rc
 
+
+FIND="button-icon=start-here-arcolinux"
+REPLACE="button-icon=start-here-arch"
 sed -i "s/$FIND/$REPLACE/g" root/etc/skel/.config/xfce4/panel/whiskermenu-7.rc
 
 
