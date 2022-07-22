@@ -77,8 +77,9 @@ if [[ "$response" == [yY] ]]; then
 	echo "##################################################################################"
 	echo
 
-	sudo cp -r /arco/ /
-	cp -r /arco/etc/skel/. $HOME
+	sudo cp -rv /arco/etc/ /
+	sudo cp -rv /arco/usr/ /
+	sudo cp -rv /arco/etc/skel/.* $HOME
 
 	echo
   	echo "##################################################################################"
