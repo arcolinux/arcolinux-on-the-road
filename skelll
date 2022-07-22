@@ -83,7 +83,7 @@ if [[ "$response" == [yY] ]]; then
 	echo
 	echo "##################################################################################"
 	echo	
-	cp -rv /arco/etc/skel/.* $HOME	
+	cp -rv /arco/etc/skel/. $HOME
 	echo
 	echo "##################################################################################"
 	echo	
@@ -92,17 +92,17 @@ if [[ "$response" == [yY] ]]; then
 	echo "Installing software"
 	sudo pacman -S meld --noconfirm --needed
 	sudo pacman -S arc-gtk-theme --noconfirm --needed
-	sudo pacman -S papirus-icon-theme --confirm --needed
-	sudo pacman -S sardi-icons --confirm --needed
-	sudo pacman -S vimix-cursors --confirm --needed
-	sudo pacman -S archlinux-logout-git --confirm --needed
-	sudo pacman -S arcolinux-wallpapers-git --confirm --needed
-	sudo pacman -S rxvt-unicode --confirm --needed
-	sudo pacman -S sublime-text-4 --confirm --needed
-	sudo pacman -S ttf-droid --confirm --needed
-	sudo pacman -S dmenu --confirm --needed
-	sudo pacman -S ripgrep --confirm --needed
-	sudo pacman -S variety --confirm --needed
+	sudo pacman -S papirus-icon-theme --noconfirm --needed
+	sudo pacman -S sardi-icons --noconfirm --needed
+	sudo pacman -S vimix-cursors --noconfirm --needed
+	sudo pacman -S archlinux-logout-git --noconfirm --needed
+	sudo pacman -S arcolinux-wallpapers-git --noconfirm --needed
+	sudo pacman -S rxvt-unicode --noconfirm --needed
+	sudo pacman -S sublime-text-4 --noconfirm --needed
+	sudo pacman -S ttf-droid --noconfirm --needed
+	sudo pacman -S dmenu --noconfirm --needed
+	sudo pacman -S ripgrep --noconfirm --needed
+	sudo pacman -S variety --noconfirm --needed
 	echo
 	echo
   	echo "##################################################################################"
