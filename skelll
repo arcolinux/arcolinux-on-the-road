@@ -95,21 +95,23 @@ if [[ "$response" == [yY] ]]; then
 	sudo cp -rv /arco/usr/* /usr
 	echo
 	echo "Installing software"
-	sudo pacman -S meld --noconfirm --needed
 	sudo pacman -S arc-gtk-theme --noconfirm --needed
-	sudo pacman -S papirus-icon-theme --noconfirm --needed
-	sudo pacman -S sardi-icons --noconfirm --needed
-	sudo pacman -S vimix-cursors --noconfirm --needed
 	sudo pacman -S archlinux-logout-git --noconfirm --needed
+	sudo pacman -S arcolinux-kvantum-git --noconfirm --needed
+	sudo pacman -S arcolinux-variety-git --noconfirm --needed	
 	sudo pacman -S arcolinux-wallpapers-git --noconfirm --needed
+	sudo pacman -S dmenu --noconfirm --needed
+	sudo pacman -S file-roller --noconfirm --needed
+	sudo pacman -S kvantum --noconfirm --needed
+	sudo pacman -S meld --noconfirm --needed
+	sudo pacman -S papirus-icon-theme --noconfirm --needed
+	sudo pacman -S ripgrep --noconfirm --needed
 	sudo pacman -S rxvt-unicode --noconfirm --needed
+	sudo pacman -S sardi-icons --noconfirm --needed
 	sudo pacman -S sublime-text-4 --noconfirm --needed
 	sudo pacman -S ttf-droid --noconfirm --needed
-	sudo pacman -S dmenu --noconfirm --needed
-	sudo pacman -S ripgrep --noconfirm --needed
 	sudo pacman -S variety --noconfirm --needed
-	sudo pacman -S file-roller --noconfirm --needed
-	echo
+	sudo pacman -S vimix-cursors --noconfirm --needed
 	echo
 	tput setaf 1
   	echo "##################################################################################"
