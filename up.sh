@@ -45,6 +45,27 @@ wget https://archlinux.org/packages/core/any/archlinux-keyring/download --conten
 #get latest archlinux-keyring
 wget https://archlinux.org/packages/community/x86_64/alacritty/download/ --content-disposition -P $workdir/root/usr/share/on-the-road/packages/
 
+echo "Keyring and mirror from ArcoLinux"
+cp /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo/x86_64/arcolinux-keyring*pkg.tar.zst /home/erik/ARCO/ARCOLINUX/arcolinux-on-the-road/root/usr/share/on-the-road/packages/
+
+echo "Keyring and mirror from ArcoLinux"
+cp /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo/x86_64/arcolinux-mirror*pkg.tar.zst /home/erik/ARCO/ARCOLINUX/arcolinux-on-the-road/root/usr/share/on-the-road/packages/
+
+echo "Mirror from XeroLinux"
+cp /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party/x86_64/xerolinux-mirror*pkg.tar.zst /home/erik/ARCO/ARCOLINUX/arcolinux-on-the-road/root/usr/share/on-the-road/packages/
+
+echo "Keyring and mirror from Garuda and EOS"
+cp /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party/x86_64/chaotic-keyring*pkg.tar.zst /home/erik/ARCO/ARCOLINUX/arcolinux-on-the-road/root/usr/share/on-the-road/packages/
+
+echo "Keyring and mirror from Garuda and EOS"
+cp /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party/x86_64/endeavouros-keyring*pkg.tar.zst /home/erik/ARCO/ARCOLINUX/arcolinux-on-the-road/root/usr/share/on-the-road/packages/
+
+echo "Keyring and mirror from Garuda and EOS"
+cp /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party/x86_64/chaotic-mirror*pkg.tar.zst /home/erik/ARCO/ARCOLINUX/arcolinux-on-the-road/root/usr/share/on-the-road/packages/
+
+echo "Keyring and mirror from Garuda and EOS"
+cp /home/erik/ARCO/ARCOLINUX-REPO/arcolinux_repo_3party/x86_64/endeavouros-mirror*pkg.tar.zst /home/erik/ARCO/ARCOLINUX/arcolinux-on-the-road/root/usr/share/on-the-road/packages/
+
 
 # Below command will backup everything inside the project folder
 git add --all .
