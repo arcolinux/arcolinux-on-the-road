@@ -37,9 +37,11 @@ git pull
 workdir=$(pwd)
 
 #remove content
-rm $workdir/usr/share/archlinux-tweak-tool/data/arch/packages/*
+rm $workdir/root/usr/share/on-the-road/packages/*
 #get latest archlinux-keyring
 wget https://archlinux.org/packages/core/any/archlinux-keyring/download --content-disposition -P $workdir/root/usr/share/on-the-road/packages/
+
+
 # Below command will backup everything inside the project folder
 git add --all .
 
