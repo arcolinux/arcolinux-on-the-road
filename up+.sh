@@ -39,6 +39,9 @@ workdir=$(pwd)
 #remove content
 rm $workdir/root/usr/share/on-the-road/packages/*
 
+echo "getting latest /etc/pacman.conf"
+wget https://raw.githubusercontent.com/arcolinux/arcolinuxl-iso/master/archiso/airootfs/etc/pacman.conf -O $workdir/root/usr/share/on-the-road/pacman.conf
+
 #get latest archlinux-keyring
 wget https://archlinux.org/packages/core/any/archlinux-keyring/download --content-disposition -P $workdir/root/usr/share/on-the-road/packages/
 
