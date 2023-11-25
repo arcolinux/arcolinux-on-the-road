@@ -67,7 +67,7 @@ if [[ "$response" == [yY] ]]; then
 	echo "##################################################################################"
 	echo
 
-	cp -Rf ~/.config ~/.config-backup-$time
+	cp -Rf ~/.config .profile .zshenv .bashrc ~/.config-backup-$time
 
 	echo
 	echo "##################################################################################"
